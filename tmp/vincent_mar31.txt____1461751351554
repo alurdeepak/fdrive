@@ -1,0 +1,54 @@
+
+Apps list
+5 apps
+
+Meets - like Lync - web browser - used for conf with vendors (open source jc meets)
+Ideabox -gathering new ideas from team - foundation for innovation management
+DSU financials -6 verticals - targets for each opcos - buss plans, targets,a ctuals
+Info on each opcos - demo, population
+awards = grp excelelncfe awards - ctaegories - it, networks for each opco
+
+
+
+dsulabs.ae/accounts/login
+
+PHP/laravel/mysql - 2 resources needed
+Node js - express  used in info on each opcos
+
+Mobile connect from GSMA
+
+"/DataCentre_Flr9/DataCentre_Flr9_EnvParams/?OAuth=jFI2sdBqxgVcm1G6az0MyCKHTRi7S4JW&airq=200&alcoholParam=400"
+/DataCentre_Flr9/DataCentre_Flr9_EnvParams/?OAuth=jFI2sdBqxgVcm1G6az0MyCKHTRi7S4JW&airq=200&alcoholParam=400
+
+  
+   float t_humid = dht.readHumidity();
+  // Read temperature as Celsius (the default)
+  float t_ctemp = dht.readTemperature();
+  
+ int soil = analogRead(A3);
+  int airq = analogRead(A4);
+   int alcohol = analogRead(A5);
+   char* data_to_send1;
+strcpy(data_to_send1,"/DataCentre_Flr9/DataCentre_Flr9_EnvParams/?OAuth=jFI2sdBqxgVcm1G6az0MyCKHTRi7S4JW&");
+
+String data_to_send;
+data_to_send.concat("atemp=");
+data_to_send.concat(t_ctemp);
+data_to_send.concat("&humid=");
+data_to_send.concat(t_humid);
+data_to_send.concat("&airq=");
+data_to_send.concat(airq);
+data_to_send.concat("&soilm=");
+data_to_send.concat(soil);
+data_to_send.concat("&alc=");
+data_to_send.concat(alcohol);
+char* data2;
+//Serial.println(data_to_send);
+
+data_to_send.toCharArray(data2,data_to_send.length());
+//strcpy(data_to_send1,data2);
+var upload = multer({ dest: './tmp',rename: function (fieldname, filename) {
+    console.log("fname",filename);
+      return "dsa.txt";
+  }
+                   // });

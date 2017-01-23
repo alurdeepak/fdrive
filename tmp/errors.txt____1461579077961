@@ -1,0 +1,4 @@
+Error Message is:  cvc-complex-type.2.4.b: The content of element 'SyncScope' is not complete. One of '{SyncObject}' is expected.
+at  Line 27 Column 21
+ for Object: null at Node null
+ at URL:  null
